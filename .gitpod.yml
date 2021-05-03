@@ -16,6 +16,9 @@ tasks:
     mysql -u root -e "CREATE DATABASE testdb";
     apachectl start;
     multitail /workspace/one-day-at-itx/gitpod_config/apache/logs/access.log -I /workspace/one-day-at-itx/gitpod_config/apache/logs/error.log
+- name: Symfony install
+  command: >
+    composer install
 - name: Terminal
   command: >
     echo "";
