@@ -14,6 +14,6 @@
 2. Your environment is being prepared, wait about 40 seconds (A splash screen will appear)
 3. VScode (or Theia depending on your settings) IDE will be displayed.
 4. Note that one terminal is running sudo docker-up, and another terminal in parallel is running ddev start
-5. Find your website's URL gp url 8080
-6. Open your website's URL in a browser, you should see a PHP info screen.
+5. Find your website's URL with `gp url 8080`
+6. Open your website's URL (should be [http://localhost:8080](http://localhost:8080)) in a browser, you should see a PHP info screen.
 7.  🎉
