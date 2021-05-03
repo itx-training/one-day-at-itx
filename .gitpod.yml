@@ -1,7 +1,7 @@
 image:
   file: .gitpod.dockerfile
 ports:
-- port: 8080
+- port: 4200
   onOpen: open-preview
 - port: 3306
   onOpen: ignore
@@ -16,6 +16,10 @@ tasks:
     mysql -u root -e "CREATE DATABASE testdb";
     apachectl start;
     multitail /workspace/one-day-at-itx/gitpod_config/apache/logs/access.log -I /workspace/one-day-at-itx/gitpod_config/apache/logs/error.log
+- name: Angular
+  command: >
+    yarn install;
+    yarn ng serve
 - name: Terminal
   command: >
     echo "";

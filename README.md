@@ -15,7 +15,7 @@
 3. VScode (or Theia depending on your settings) IDE will be displayed.
 4. Note that one terminal is running sudo docker-up, and another terminal in parallel is running ddev start
 5. PHP served site should be available under [http://localhost:8080](http://localhost:8080) (see `gp url 8080`)
-6. Start angular serving using `yarn ng serve` and open in browser [http://localhost:4200](http://localhost:4200) (see `gp url 4200`)
+6. Start angular serving using `yarn ng serve` which should open in preview browser [http://localhost:4200](http://localhost:4200) (see `gp url 4200`)
 7.  🎉
 
 ## Angular details
