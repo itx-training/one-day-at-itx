@@ -1,0 +1,31 @@
+image:
+  file: .gitpod.dockerfile
+ports:
+- port: 8080
+  onOpen: open-preview
+- port: 3306
+  onOpen: ignore
+tasks:
+- name: Apache & MySQL
+  command: >
+    cp .env.example .env;
+    cp .htaccess.example .htaccess;
+    mysqld --initialize-insecure --log-error=$GITPOD_REPO_ROOT/gitpod_config/mysql/logs/error.log --general-log-file=$GITPOD_REPO_ROOT/gitpod_config/mysql/logs/mysql.log --datadir=$GITPOD_REPO_ROOT/gitpod_config/mysql/data;
+    mysqld --log-error=$GITPOD_REPO_ROOT/gitpod_config/mysql/logs/error.log --general-log-file=$GITPOD_REPO_ROOT/gitpod_config/mysql/logs/mysql.log --datadir=$GITPOD_REPO_ROOT/gitpod_config/mysql/data &
+    sleep 5;
+    mysql -u root -e "CREATE DATABASE testdb";
+    apachectl start;
+    multitail /workspace/one-day-at-itx/gitpod_config/apache/logs/access.log -I /workspace/one-day-at-itx/gitpod_config/apache/logs/error.log
+- name: Terminal
+  command: >
+    echo "";
+    echo "";
+    echo "";
+    echo "Welcome!";
+    echo "";
+    echo "Start, stop or review Apache errors:";
+    echo " * apachectl stop";
+    echo " * apachectl start";
+    echo " * gp open /var/log/apache2/access.log";
+    echo " * gp open /var/log/apache2/error.log";
+  openMode: split-right
