@@ -29,3 +29,11 @@ tasks:
     echo " * gp open /var/log/apache2/access.log";
     echo " * gp open /var/log/apache2/error.log";
   openMode: split-right
+vscode:
+  extensions:
+    - cweijan.vscode-mysql-client2@3.6.8:f38520fce0e95bcd0036c3ca324f99e9
+    - ms-vscode.vscode-typescript-tslint-plugin@1.2.2:d274373c4100d0d3c4b7751c6c262221
+    - johnpapa.angular2@11.0.0:4ddc5fe5fd7f0366ee7f1c3fd641b629
+    - angular.ng-template@11.2.11:b96ce26cfbde3c641c4ce80a49788ed9
+    - ecmel.vscode-html-css@1.9.1:23103121f682e8e5bbd2f7e5e55c8a6e
+    - tmrdh.symfony-helper@1.0.8:3f6b26931af2ebbc8f7ed6ba61f99645
