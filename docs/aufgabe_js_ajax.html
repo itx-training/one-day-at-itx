@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Fachtest Programmierung JS/AJAX</title>
+</head>
+<body>
+<h1>1 Aufgaben</h1>
+<p>&nbsp;</p>
+<h2>1.1 Beschreibung</h2>
+<p>Es soll eine HTML Seite erstellt werden, auf der eine Liste mit Produkten ausgegeben wird. Oberhalb der Produktliste wird ein Filter platziert, &uuml;ber den der Besucher die Liste der Produkte reduzieren kann.</p>
+<p>Alle &Auml;nderungen am Inhalt der Seite sollen per Javascript bzw. Ajax erfolgen. Das Layout spielt bei dieser Aufgabe keine Rolle.</p>
+<p>Als Javacript Hilfsmittel k&ouml;nnen die folgenden Bibliotheken eingesetzt werden - falls sinnvoll:</p>
+<ul>
+	<li>jQuery</li>
+	<li>Bootstrap</li>
+</ul>
+<h2>1.2 Details zu Produkten</h2>
+<p>Produkte bestehen aus den Attributen: Id, Name, Beschreibung. Zu jedem Produkt wird genau 1 Farbe und genau 1 Gewicht hinterlegt.</p>
+<p>Als Farbe gibt es die Werte "rot" und "gr&uuml;n". Als Gewicht gibt es die Werte "5 kg" und "10 kg".</p>
+<p>Die Produkte werden bei dieser Aufgabe nicht aus einer Datenbank geladen, sondern in PHP durch eine Hilfsfunktion bereitgestellt. Diese ist bereits vorbereitet.</p>
+<p>Die Filterwerte und die Produktliste sollen &uuml;ber Ajax geladen werden, wobei die Produktliste vom gew&auml;hlten Filter abh&auml;ngt.</p>
+<h2>1.3 Details zum Filter</h2>
+<p>&nbsp;Der Filter erm&ouml;glicht das Reduzieren der Listeneintr&auml;ge &uuml;ber die Auswahl einer Farbe und/oder die Auswahl eines Gewichts.</p>
+<p>Farbe: rot | gr&uuml;n</p>
+<p>Gewicht: 5 kg | 10 kg</p>
+<p>Es kann jeweils nur 1 Wert pro Attribut gew&auml;hlt werden. Der Filter soll initial nur die Attribute zur Auswahl erm&ouml;glichen, die bei den Produkten vorkommen.</p>
+<h2>1.4 Das bedeutet folgenden Ablauf:</h2>
+<ol>
+	<li>Filter zeigt sich vollst&auml;ndig an</li>
+	<li>Produktliste zeigt sich vollst&auml;ndig an</li>
+	<li>Besucher w&auml;hlt einen Wert im Filter</li>
+	<li>Produktliste reduziert sich</li>
+	<li>Bei einer Filterkombination, f&uuml;r die es keine Produkte gibt, wird eine entsprechende Meldung angezeigt</li>
+</ol>
+</body>
+</html>
