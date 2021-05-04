@@ -8,7 +8,9 @@ USER root
 RUN a2dismod mpm_event
 
 # Install Node.js
-RUN apt-get install -y curl ca-certificates apt-transport-https --no-install-recommends && \
+RUN cd /usr/lib/apt/methods && \
+    ln -s -f http https
+RUN apt install -y curl ca-certificates apt-transport-https --no-install-recommends && \
 	curl -sL https://deb.nodesource.com/setup_${NODEJS_VERSION_MAJOR}.x | bash - \
 	&& apt-get install -y nodejs
 	
