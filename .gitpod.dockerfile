@@ -1,8 +1,26 @@
 FROM gitpod/workspace-full
 
+ARG NODEJS_VERSION_MAJOR=10
+ARG YARN_VERSION=1.22.5-1
+
 USER root
 
 RUN a2dismod mpm_event
+
+# Install Node.js
+RUN apt-get install -y curl ca-certificates apt-transport-https --no-install-recommends && \
+	curl -sL https://deb.nodesource.com/setup_${NODEJS_VERSION_MAJOR}.x | bash - \
+	&& apt-get install -y nodejs
+	
+# Install Yarn
+RUN mkdir -p /var/cache/yarn
+RUN apt install -y gnupg2
+RUN	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
+    apt update && apt install -y yarn=${YARN_VERSION}
+	
+# Mark packages as hold, i.e. staying at given version
+RUN apt-mark hold yarn 
 
 RUN apt update && apt upgrade -y && apt -y install mysql-server php-xmlrpc php-pdo-mysql
 
