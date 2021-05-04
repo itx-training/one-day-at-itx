@@ -18,6 +18,8 @@ tasks:
     multitail /workspace/one-day-at-itx/gitpod_config/apache/logs/access.log -I /workspace/one-day-at-itx/gitpod_config/apache/logs/error.log
 - name: Terminal
   command: >
+    nvm install 12;
+    nvm use 12;
     echo "";
     echo "";
     echo "";
