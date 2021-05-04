@@ -47,3 +47,12 @@ php vendor/bin/typo3cms install:setup \
     --admin-password=password \
     --site-setup-type=site
 ```
+
+## All available pods
+
+- [![Gitpod Ready-to-Code](https://img.shields.io/badge/https://img.shields.io/badge/Gitpod-php-blue?logo=gitpod)](https://gitpod.io/#https://github.com/itx-informationssysteme/one-day-at-itx)
+- [![Gitpod Ready-to-Code](https://img.shields.io/badge/https://img.shields.io/badge/Gitpod-angular-blue?logo=gitpod)](https://gitpod.io/#https://github.com/itx-informationssysteme/one-day-at-itx/tree/angular)
+- [![Gitpod Ready-to-Code](https://img.shields.io/badge/https://img.shields.io/badge/Gitpod-symfony-blue?logo=gitpod)](https://gitpod.io/#https://github.com/itx-informationssysteme/one-day-at-itx/tree/symfony)
+- [![Gitpod Ready-to-Code](https://img.shields.io/badge/https://img.shields.io/badge/Gitpod-typo3-blue?logo=gitpod)](https://gitpod.io/#https://github.com/itx-informationssysteme/one-day-at-itx/tree/typo3)
+  
+
