@@ -20,11 +20,10 @@ RUN	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 RUN apt-mark hold yarn
 
 # Install latest composer v1
-# RUN wget https://getcomposer.org/installer -o composer-setup.php && \
-#	php composer-setup.php --install-dir=/usr/bin --filename=composer --version=1.10.22 && \
-#	chmod ugo+x /usr/bin/composer
-
-RUN /usr/bin/composer self-update 1.10.22
+RUN wget https://getcomposer.org/installer -o composer-setup.php && \
+	rm -f /usr/bin/composer && \
+	php composer-setup.php --install-dir=/usr/bin --filename=composer --version=1.10.22 && \
+	chmod ugo+x /usr/bin/composer
 
 RUN echo "include \${GITPOD_REPO_ROOT}/gitpod_config/apache/apache.conf" > /etc/apache2/apache2.conf
 RUN echo ". \${GITPOD_REPO_ROOT}/gitpod_config/apache/envvars" > /etc/apache2/envvars
