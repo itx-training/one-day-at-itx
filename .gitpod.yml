@@ -21,6 +21,8 @@ tasks:
     composer install
 - name: Terminal
   command: >
+    nvm install 12;
+    nvm use 12;
     echo "";
     echo "";
     echo "";
