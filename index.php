@@ -7,6 +7,9 @@
 	<title>Willkommen bei it.x</title>
 </head>
 <body>
+	<div style="padding: 10px">
+		<img src="logo.png" alt="logo"/>
+	</div>
 	<div>
 		<h1>Ein Tag bei it.x</h1>
 		<p>
