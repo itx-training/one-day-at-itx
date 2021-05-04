@@ -18,3 +18,10 @@
 6. Open your website's URL (should be [http://localhost:8080](http://localhost:8080)) in a browser, you should see the Symfony welcome screen
 7. API-Platform API docu should be available under [http://localhost:8080/api](http://localhost:8080/api)
 8.  🎉
+
+## All available pods
+
+- [![Gitpod Ready-to-Code](https://img.shields.io/badge/https://img.shields.io/badge/Gitpod-php-blue?logo=gitpod)](https://gitpod.io/#https://github.com/itx-informationssysteme/one-day-at-itx)
+- [![Gitpod Ready-to-Code](https://img.shields.io/badge/https://img.shields.io/badge/Gitpod-angular-blue?logo=gitpod)](https://gitpod.io/#https://github.com/itx-informationssysteme/one-day-at-itx/tree/angular)
+- [![Gitpod Ready-to-Code](https://img.shields.io/badge/https://img.shields.io/badge/Gitpod-symfony-blue?logo=gitpod)](https://gitpod.io/#https://github.com/itx-informationssysteme/one-day-at-itx/tree/symfony)
+- [![Gitpod Ready-to-Code](https://img.shields.io/badge/https://img.shields.io/badge/Gitpod-typo3-blue?logo=gitpod)](https://gitpod.io/#https://github.com/itx-informationssysteme/one-day-at-itx/tree/typo3)
