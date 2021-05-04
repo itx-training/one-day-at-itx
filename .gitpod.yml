@@ -20,7 +20,7 @@ tasks:
   command: >
     nvm install 12;
     nvm use 12;
-    composer install;
+    composer install && \
     php vendor/bin/typo3cms install:setup \
     --no-interaction \
     --database-user-name=root \
