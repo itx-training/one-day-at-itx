@@ -7,7 +7,7 @@ USER root
 
 RUN a2dismod mpm_event
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y mysql-server php-xmlrpc php-pdo-mysql
+RUN apt-get update && apt-get upgrade -y && apt-get install -y mysql-server php-xmlrpc php-pdo-mysql wget
 
 # Install Yarn
 RUN mkdir -p /var/cache/yarn
@@ -18,6 +18,11 @@ RUN	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 
 # Mark packages as hold, i.e. staying at given version
 RUN apt-mark hold yarn
+
+# Install latest composer v1
+RUN wget https://getcomposer.org/installer -o composer-setup.php && \
+	php composer-setup.php --install-dir=/usr/bin --filename=composer --version=1.10.22 && \
+	chmod ugo+x /usr/bin/composer
 
 RUN echo "include \${GITPOD_REPO_ROOT}/gitpod_config/apache/apache.conf" > /etc/apache2/apache2.conf
 RUN echo ". \${GITPOD_REPO_ROOT}/gitpod_config/apache/envvars" > /etc/apache2/envvars
