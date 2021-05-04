@@ -20,7 +20,7 @@ RUN	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 RUN apt-mark hold yarn
 
 # Install latest composer v1
-RUN wget -o composer-setup.php https://getcomposer.org/installer && \
+RUN wget -O composer-setup.php https://getcomposer.org/installer && \
 #	rm -f /usr/bin/composer && \
 	php composer-setup.php --install-dir=/usr/bin --filename=composer --version=1.10.22 && \
 	chmod ugo+x /usr/bin/composer
