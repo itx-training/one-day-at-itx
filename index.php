@@ -19,9 +19,7 @@
 			zu zeigen, was du so "drauf hast". Um letzteres einigermaßen geregelt überprüfen zu können, haben wir folgende, kleine Aufgaben vorbereitet:
 
 			<ol>
-				<li><a href="docs/aufgabe_php.html">Fachtest Programmierung PHP</a></li>
-				<li><a href="docs/aufgabe_js_ajax.html">Fachtest Programmierung JS/AJAX</a></li>
-				<li><a href="docs/aufgabe_html_css.html">Fachtest Programmierung HTML/CSS</a></li>
+				<li><a href="docs/aufgabe_angular.html">Fachtest Programmierung Angular</a></li>
 			</ol>
 
 			Bitte scheue dich nicht bei Fragen, z.B. zur Bearbeitung der Aufgaben aufkommen aber auch zu uns, auf uns zuzukommen.
