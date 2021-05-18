@@ -1,23 +1,24 @@
 .container {
   position: relative;
   @extend .flex;
-  width: 80%;
+  width: 100%;
 }
 .listPanel {
    @extend .flex;
-  width: 80%;
+  width: 100%;
 }
 .property {
   min-width: 20%;
 }
 .filterPanel{
   @extend .flex;
-  width: 20%;
+  width: 100%;
   flex-direction: column;
 }
-filterGroup {
+.filterGroup {
   @extend .flex;
   flex-wrap: nowrap;
+  justify-content: space-evenly;;
 }
 .flex {
   display: flex;

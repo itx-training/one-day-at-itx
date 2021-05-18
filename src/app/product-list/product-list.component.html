@@ -1,18 +1,33 @@
 <div class="container">
+  <!--top side FilterPanel-->
+  <div class="filterPanel">
+    <h3>FILTER</h3>
+    <div class="filterGroup">
+      <!--Weight Filter-->
+      <h5>Weight</h5>
+      <div class="filterGroup">
+        <input type="checkbox" name="WEIGHT_FIVE" [(ngModel)]="weight.five" (change)="weight.ten = false;" appIsValueFilterable [itemList]="items" filterName="'five'">
+        <label for="WEIGHT">5 kg</label>
+        <input type="checkbox" name="WEIGHT_TEN" [(ngModel)]="weight.ten" (change)="weight.five = false;" appIsValueFilterable [itemList]="items" filterName="'ten'">
+        <label for="WEIGHT">10 kg</label>
+      </div>
+      <!--Color Filter-->
+      <h5>Color</h5>
+      <div class="filterGroup">
+        <input type="checkbox" name="COLOR_RED" [(ngModel)]="color.red" (change)="color.green = false;" appIsValueFilterable [itemList]="items" filterName="'red'">
+        <label for="COLOR_RED">rot</label>
+        <input type="checkbox" name="COLOR_GRUEN" [(ngModel)]="color.green" (change)="color.red = false;" appIsValueFilterable [itemList]="items" filterName="'green'">
+        <label for="COLOR_GRUEN">grün</label>
+      </div>
+      <!--Button to filter-->
+      <button type="button" (click)="filter()">Filter</button>
+    </div>
+  </div>
+
+  <!--bottom side Listpanel-->
   <div class="listPanel">
     <ng-container *ngFor="let item of items">
       <div class="property" *ngFor="let property of item| keyvalue: originalOrder">{{property.value}}</div>
     </ng-container>
-
-  </div>
-  <div class="filterPanel">
-    <h3>FILTER</h3>
-    <h5>Weight</h5>
-    <div class="filterGroup">
-      <input type="checkbox" name="WEIGHT_FIVE">
-      <label for="WEIGHT">5 kg</label>
-      <input type="checkbox" name="WEIGHT_TEN">
-      <label for="WEIGHT">10 kg</label>
-    </div>
   </div>
 </div>
