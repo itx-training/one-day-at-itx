@@ -6,17 +6,17 @@
       <!--Weight Filter-->
       <h5>Weight</h5>
       <div class="filterGroup">
-        <input type="checkbox" name="WEIGHT_FIVE" [(ngModel)]="weight.five" (change)="weight.ten = false;" appIsValueFilterable [itemList]="items" filterName="'five'">
+        <input type="checkbox" name="WEIGHT_FIVE" [(ngModel)]="weight.five" (change)="weight.ten = false;" appIsValueFilterable [itemList]="items" filterName="5 kg">
         <label for="WEIGHT">5 kg</label>
-        <input type="checkbox" name="WEIGHT_TEN" [(ngModel)]="weight.ten" (change)="weight.five = false;" appIsValueFilterable [itemList]="items" filterName="'ten'">
+        <input type="checkbox" name="WEIGHT_TEN" [(ngModel)]="weight.ten" (change)="weight.five = false;" appIsValueFilterable [itemList]="items" filterName="10 kg">
         <label for="WEIGHT">10 kg</label>
       </div>
       <!--Color Filter-->
       <h5>Color</h5>
       <div class="filterGroup">
-        <input type="checkbox" name="COLOR_RED" [(ngModel)]="color.red" (change)="color.green = false;" appIsValueFilterable [itemList]="items" filterName="'red'">
+        <input type="checkbox" name="COLOR_RED" [(ngModel)]="color.red" (change)="color.green = false;" appIsValueFilterable [itemList]="items" filterName="rot">
         <label for="COLOR_RED">rot</label>
-        <input type="checkbox" name="COLOR_GRUEN" [(ngModel)]="color.green" (change)="color.red = false;" appIsValueFilterable [itemList]="items" filterName="'green'">
+        <input type="checkbox" name="COLOR_GRUEN" [(ngModel)]="color.green" (change)="color.red = false;" appIsValueFilterable [itemList]="items" filterName="grün">
         <label for="COLOR_GRUEN">grün</label>
       </div>
       <!--Button to filter-->

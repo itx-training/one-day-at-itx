@@ -1,39 +1,30 @@
-import { Directive, Input, HostBinding, OnInit, Renderer2, ElementRef } from '@angular/core';
+import { Directive, Input, HostBinding, OnInit, Renderer2, ElementRef, OnChanges } from '@angular/core';
 import { element } from 'protractor';
 
 @Directive({
   selector: '[appIsValueFilterable]'
 })
 
-@HostBinding('disabled')
-
-export class IsValueFilterableDirective implements OnInit {
+export class IsValueFilterableDirective implements OnChanges {
 
   @Input() itemList: any;
   @Input() filterName: any;
 
-  constructor(private renderer: Renderer2, private el: ElementRef) {
-  }
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
 
-  ngOnInit() {
+  ngOnChanges(): void {
+    // Looks for the filterName, if not found disable element
     let found = false;
-    console.log(this.itemList);
-
-    this.itemList.forEach((elem: any) => {
+    for (const elem of this.itemList) {
       if (elem.color === this.filterName) {
-        console.log(element);
         found = true;
       }
-    });
-    this.itemList.forEach((elem: any) => {
-      if (elem.weight === this.filterName) {
-        console.log(element);
-        found = true;
-      }
-    });
-
-    if (!found) {
-      this.renderer.setAttribute(this.el.nativeElement, 'disabled', 'disabled');
     }
+    for (const elem of this.itemList) {
+      if (elem.weight === this.filterName) {
+        found = true;
+      }
+    }
+    (this.el.nativeElement as HTMLButtonElement).disabled = found ? false : true;
   }
 }
