@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  @extend .flex;
+  width: 80%;
+}
+.listPanel {
+   @extend .flex;
+  width: 80%;
+}
+.property {
+  min-width: 20%;
+}
+.filterPanel{
+  @extend .flex;
+  width: 20%;
+  flex-direction: column;
+}
+filterGroup {
+  @extend .flex;
+  flex-wrap: nowrap;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}

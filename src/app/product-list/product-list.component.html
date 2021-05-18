@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="listPanel">
+    <ng-container *ngFor="let item of items">
+      <div class="property" *ngFor="let property of item| keyvalue: originalOrder">{{property.value}}</div>
+    </ng-container>
+
+  </div>
+  <div class="filterPanel">
+    <h3>FILTER</h3>
+    <h5>Weight</h5>
+    <div class="filterGroup">
+      <input type="checkbox" name="WEIGHT_FIVE">
+      <label for="WEIGHT">5 kg</label>
+      <input type="checkbox" name="WEIGHT_TEN">
+      <label for="WEIGHT">10 kg</label>
+    </div>
+  </div>
+</div>
